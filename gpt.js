@@ -22,7 +22,7 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
 
         // Company details
         const headerText = '';
-        const footerText = ' \n                   CH. MAZHAR IQBAL SEEDS TRADING COMPANY SMC PRIVATE LIMITED  ';
+        const footerText = ' \n                   CH. MAZHAR IQBAL SEEDS TRADING COMPANY PRIVATE LIMITED  ';
         
 
         const removeExistingHeaderFooter = (page, headerHeight, footerHeight) => {
@@ -67,7 +67,7 @@ page.drawText(footerText, {
 });
 
 // Additional smaller line below the main footer text
-page.drawText('Your additional small text here', {
+page.drawText('\n   \n   \n  Software Developed by Shaban Mazhar ', {
     x: 45, // Align with the main footer text
     y: 32, // Slightly below the previous text
     size: 9, // Smaller font size
