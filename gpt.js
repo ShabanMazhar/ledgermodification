@@ -57,14 +57,24 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
                 height: logoDims.height,
             });
 
-            // Footer text
-            page.drawText(footerText, {
-                x: 45, // Adjust x position for footer text
-                y: 45, // Adjust y position for footer text
-                size: 12,
-                color: PDFLib.rgb(0, 0, 0),
-                lineHeight: 10,
-            });
+            // Footer text (Main company name)
+page.drawText(footerText, {
+    x: 45, // Adjust x position for footer text
+    y: 45, // Adjust y position for footer text
+    size: 12,
+    color: PDFLib.rgb(0, 0, 0),
+    lineHeight: 10,
+});
+
+// Additional smaller line below the main footer text
+page.drawText('Your additional small text here', {
+    x: 45, // Align with the main footer text
+    y: 32, // Slightly below the previous text
+    size: 9, // Smaller font size
+    color: PDFLib.rgb(0, 0, 0),
+    lineHeight: 10,
+});
+
 
             // Header text
             page.drawText(headerText, {
