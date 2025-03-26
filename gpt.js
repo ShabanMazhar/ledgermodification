@@ -67,7 +67,7 @@ page.drawText(footerText, {
 });
 
 // Additional smaller line below the main footer text
-page.drawText('\n   \n   \n  Software Developed by Shaban Mazhar ', {
+page.drawText('\n   \n   Software Developed by Shaban Mazhar ', {
     x: 45, // Align with the main footer text
     y: 32, // Slightly below the previous text
     size: 9, // Smaller font size
