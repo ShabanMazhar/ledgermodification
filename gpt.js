@@ -22,7 +22,7 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
 
         // Company details
         const headerText = '';
-        const footerText = ' \n                   CH. MAZHAR IQBAL SEEDS TRADING COMPANY  PRIVATE LIMITED  ';
+        const footerText = ' \n                   CH. MAZHAR IQBAL SEEDS TRADING COMPANY SMC PRIVATE LIMITED  ';
         
 
         const removeExistingHeaderFooter = (page, headerHeight, footerHeight) => {
