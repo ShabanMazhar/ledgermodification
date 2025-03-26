@@ -123,14 +123,23 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
                 lineHeight: 14,
             });
 
-            // Add new footer without a green line
-            page.drawText(footerText, {
-                x: 10,
-                y: 55,  // Adjust y position to be below the removed green line
-                size: 12,
-                color: PDFLib.rgb(0, 0.5, 0),
-                lineHeight: 14,
-            });
+           // Add new footer without a green line
+page.drawText(footerText, {
+    x: 10,
+    y: 55,  // Adjust y position
+    size: 12,
+    color: PDFLib.rgb(0, 0.5, 0),
+    lineHeight: 14,
+});
+
+// Add smaller text below the main footer text
+page.drawText('Your additional text here', {
+    x: 10,
+    y: 40, // Adjust to position below the previous text
+    size: 9, // Smaller font size
+    color: PDFLib.rgb(0, 0.5, 0),
+    lineHeight: 12,
+});
         };
 
         pages.forEach(page => {
