@@ -20,6 +20,24 @@ document.getElementById('pdf-form').addEventListener('submit', async (e) => {
         const watermarkImage = await pdfDoc.embedPng(watermarkBytes);
         const pages = pdfDoc.getPages();
 
+
+     
+        const lastPage = pages[pages.length - 1];
+        
+        lastPage.drawRectangle({
+            x: 310,         // from the left
+            y: 100,        // from the bottom (higher so it shows up reliably)
+            width: 200,    // length of the line
+            height: 0.5,   // very thin height to simulate a line
+            color: PDFLib.rgb(0, 0, 0),
+        });
+        
+
+
+
+
+
+
         // Company details
         const headerText = '';
         const footerText = ' \n                   CH. MAZHAR IQBAL SEEDS TRADING COMPANY PRIVATE LIMITED  ';
